@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="section">
+      <p class="text">
+        2023년 5월 2일 지금은 12시 10분 배가 몹시 고파 배고프다는 걸 표현하기
+        위해 배에서 꼬르륵 소리를 용 처럼 내는 신동익 형의 어필을 잘 듣고 기록
+        중입니다. 작성자는 전재원입니다. 저도 배가 고프지만 아침밥을 너무 많이
+        먹어서 생각이 없습니다. 하지만 다음 수업이 있기 때문에 밥을 먹고
+        에너지를 사용해야 하기 때문에 고민 중입니다. 어떻게 해야 할지 생각
+        중입니다.. 흠 지금 밖에서 먹자고 하는데 학식이 최고아닌가요??
+      </p>
+    </div>
+
+    <script>
+      const text = document.querySelector(".text");
+      text.innerHTML = text.textContent.replace(/\S/g, "<span>$&</span>");
+
+      const letters = document.querySelectorAll("span");
+      for (let i = 0; i < letters.length; i++) {
+        letters[i].addEventListener("mouseover", function () {
+          letters[i].classList.add("active");
+        });
+      }
+    </script>
+  </body>
+</html>
